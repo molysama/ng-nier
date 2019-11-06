@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'nier-project';
 
-  isChecked = false
+  check2B = false
+  check9S = true
+  checkA2 = true
 
-  showChecked() {
-    console.log(this.isChecked)
-  }
+  android = []
 }

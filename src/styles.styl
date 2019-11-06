@@ -7,7 +7,7 @@ $boxShadow = 3px 3px 0 rgba($color, .6)
 $t-shadow = .4rem .3rem rgba($color, .3)
 
 $c-bg = #C8C2AA
-// $c-bg = #D1CDB7
+$c-disabled = #ffffff
 $c-grid = #CCC8B1
 $c-weak = #BAB5A1
 $c-medium = #DCD8C0
@@ -204,9 +204,6 @@ button.nr-button {
         align-items center
         padding-left .2em
         transform translateY(0.36em)
-        &.is-checked
-            &:before
-                background $color
         &:before
             content ''
             transform rotate(45deg) translate(0.1em, -0.08em)
@@ -220,3 +217,11 @@ button.nr-button {
             min-height @width
             background-clip content-box!important
             background transparent
+        &.is-checked
+            &:before
+                background $color
+        &.disabled
+            color $c-disabled
+            &:before
+                border-color $c-disabled
+                background-color $c-disabled

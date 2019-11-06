@@ -1,5 +1,7 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectorRef, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { filter, map } from 'rxjs/operators'
 
 @Component({
   selector: 'nr-checkbox',
@@ -22,7 +24,7 @@ export class CheckboxComponent implements ControlValueAccessor {
   value: boolean
 
   @Input()
-  disabled: boolean = false
+  disabled: boolean
 
   @Output()
   onChange: EventEmitter<any> = new EventEmitter()
@@ -46,13 +48,39 @@ export class CheckboxComponent implements ControlValueAccessor {
   }
 
   updateModel() {
-    this.onModelChange(this.checked)
+    if (Object.prototype.toString.call(this.model) === '[object Array]') {
+      if (this.checked) {
+        this.addValue()
+      } else {
+        this.removeValue()
+      }
+      this.onModelChange(this.model)
+    } else {
+      this.onModelChange(this.checked)
+    }
     this.onChange.emit(this.checked)
+  }
+
+  addValue() {
+    if (this.value !== undefined) {
+      this.model = [...this.model, this.value]
+    }
+  }
+  removeValue() {
+    if (this.value !== undefined) {
+      this.model = this.model.filter(v => v !== this.value)
+    }
   }
 
   writeValue(model) {
     this.model = model
-    this.checked = model
+    if (Object.prototype.toString.call(this.model) === '[object Array]') {
+      if (this.value !== undefined) {
+        this.checked = this.model.indexOf(this.value) > -1
+      }
+    } else {
+      this.checked = this.model
+    }
     this.cd.markForCheck()
   }
 
