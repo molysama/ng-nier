@@ -1,28 +1,28 @@
 .pt2.container
-    nr-button This is a button
-    nr-fieldset
-        p 内容1
-        p 内容2
-
     h1.text
         span NIER:AUTOMATA YORHA UI
         small.ml2 Angular Component
 .nr-hr
     .container
         .nr-hr-tag
-        .content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim! Quibusdam illo molestias architecto dignissimos aut laborum commodi magni. Aspernatur laborum quod repudiandae quaerat rerum corporis tempore nihil dolorem voluptatem?
-            nr-button view
-        .content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim! Quibusdam illo molestias architecto dignissimos aut laborum commodi magni. Aspernatur laborum quod repudiandae quaerat rerum corporis tempore nihil dolorem voluptatem?
-            nr-button((click)="showChecked()") 开始
-            nr-checkbox(label="2B", [(ngModel)]="check2B")
-            nr-checkbox(label="9S", [(ngModel)]="check9S", [disabled]="false")
-            nr-checkbox(label="A2", [(ngModel)]="checkA2", [disabled]="true")
-        .content
-            nr-checkbox(label="Android-1", value="Android-1", [(ngModel)]="android")
-            nr-checkbox(label="Android-2", value="Android-2", [(ngModel)]="android")
-            nr-checkbox(label="Android-3", value="Android-3", [(ngModel)]="android")
-            nr-checkbox(label="Android-Undefined", [(ngModel)]="android")
-            p android: {{android.length > 0 ? android : 'empty'}}
+.container
+    nr-button This is a button
+    nr-fieldset
+        p 内容1
+        p 内容2
+    .content
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim! Quibusdam illo molestias architecto dignissimos aut laborum commodi magni. Aspernatur laborum quod repudiandae quaerat rerum corporis tempore nihil dolorem voluptatem?
+        nr-button view
+    .content
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim! Quibusdam illo molestias architecto dignissimos aut laborum commodi magni. Aspernatur laborum quod repudiandae quaerat rerum corporis tempore nihil dolorem voluptatem?
+        nr-button 开始
+        nr-checkbox(label="2B", [(ngModel)]="check2B")
+        nr-checkbox(label="9S", [(ngModel)]="check9S", [disabled]="false")
+        nr-checkbox(label="A2", [(ngModel)]="checkA2", [disabled]="true")
+    .content
+        nr-checkbox(label="Android-1", value="Android-1", [(ngModel)]="android")
+        nr-checkbox(label="Android-2", value="Android-2", [(ngModel)]="android")
+        nr-checkbox(label="Android-3", value="Android-3", [(ngModel)]="android")
+        nr-checkbox(label="Android-Undefined", [(ngModel)]="android")
+        p android: {{android.length > 0 ? android : 'empty'}}
 router-outlet

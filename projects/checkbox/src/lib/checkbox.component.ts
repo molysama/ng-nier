@@ -1,7 +1,5 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectorRef, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Subject } from 'rxjs';
-import { filter, map } from 'rxjs/operators'
 
 @Component({
   selector: 'nr-checkbox',

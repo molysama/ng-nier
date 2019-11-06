@@ -1,5 +1,5 @@
 {
-  "name": "nier-project",
+  "name": "ng-nier",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -63,5 +63,8 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
