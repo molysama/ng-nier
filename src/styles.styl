@@ -217,11 +217,11 @@ button.nr-button {
             min-height @width
             background-clip content-box!important
             background transparent
-        &.is-checked
-            &:before
-                background $color
+        &.is-checked:before
+            background $color
         &.disabled
             color $c-disabled
             &:before
                 border-color $c-disabled
+            &.is-checked:before
                 background-color $c-disabled

@@ -24,5 +24,6 @@
         nr-checkbox(label="Android-2", value="Android-2", [(ngModel)]="android")
         nr-checkbox(label="Android-3", value="Android-3", [(ngModel)]="android")
         nr-checkbox(label="Android-Undefined", [(ngModel)]="android")
+        nr-checkbox(label="Android-4", value="Android-4", [(ngModel)]="android", [disabled]="true")
         p android: {{android.length > 0 ? android : 'empty'}}
 router-outlet
