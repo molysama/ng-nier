@@ -42,6 +42,12 @@
       ],
       "select/*": [
         "dist/select/*"
+      ],
+      "content": [
+        "dist/content"
+      ],
+      "content/*": [
+        "dist/content/*"
       ]
     }
   },

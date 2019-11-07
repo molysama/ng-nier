@@ -8,6 +8,7 @@ import { ButtonModule } from 'projects/button/src/public-api';
 import { FieldsetModule } from 'projects/fieldset/src/public-api';
 import { CheckboxModule } from 'projects/checkbox/src/public-api';
 import { FormsModule } from '@angular/forms'
+import { ContentModule } from 'projects/content/src/public-api';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms'
   imports: [
     BrowserModule,
     FormsModule,
+    ContentModule,
     ButtonModule,
     FieldsetModule,
     CheckboxModule,
