@@ -47,6 +47,7 @@
     "apply-loader": "^2.0.0",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.0",
+    "cz-conventional-changelog": "^3.0.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -63,5 +64,10 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
