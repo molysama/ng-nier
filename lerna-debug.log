@@ -1,0 +1,5 @@
+36 error Error: Command failed: git tag @ng-nier/checkbox@0.0.2-alpha.0 -m @ng-nier/checkbox@0.0.2-alpha.0
+36 error fatal: tag '@ng-nier/checkbox@0.0.2-alpha.0' already exists
+36 error
+36 error     at makeError (C:\Users\molysama\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:174:9)
+36 error     at Promise.all.then.arr (C:\Users\molysama\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:278:16)

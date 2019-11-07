@@ -4,9 +4,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
   selector: 'nr-checkbox',
   // templateUrl: './checkbox.component.pug',
-  template: `<div class="nr-checkbox" (click)="onClick($event)">
+  template: `
+<div class="nr-checkbox" (click)="onClick($event)">
   <div [ngClass]="{'label': true, 'disabled': disabled, 'is-checked': checked}">{{label}}</div>
-</div>`,
+</div>
+`,
   styles: [],
   providers: [
     {

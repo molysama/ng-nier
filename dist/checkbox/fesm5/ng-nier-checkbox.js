@@ -150,7 +150,7 @@ var CheckboxComponent = /** @class */ (function () {
         { type: Component, args: [{
                     selector: 'nr-checkbox',
                     // templateUrl: './checkbox.component.pug',
-                    template: "<div class=\"nr-checkbox\" (click)=\"onClick($event)\">\n  <div [ngClass]=\"{'label': true, 'disabled': disabled, 'is-checked': checked}\">{{label}}</div>\n</div>",
+                    template: "\n<div class=\"nr-checkbox\" (click)=\"onClick($event)\">\n  <div [ngClass]=\"{'label': true, 'disabled': disabled, 'is-checked': checked}\">{{label}}</div>\n</div>\n",
                     providers: [
                         {
                             provide: NG_VALUE_ACCESSOR,

@@ -1,9 +1,12 @@
 {
-  "name": "button",
+  "name": "@ng-nier/button",
   "version": "0.0.1-alpha.0",
   "peerDependencies": {
     "@angular/common": "^8.2.13",
     "@angular/core": "^8.2.13"
   },
-  "gitHead": "e5f7e136653a9bfa5e9722cdd4de9ceceffa93a8"
+  "gitHead": "e5f7e136653a9bfa5e9722cdd4de9ceceffa93a8",
+  "publishConfig": {
+    "access": "public"
+  }
 }
