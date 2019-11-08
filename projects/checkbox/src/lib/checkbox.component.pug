@@ -1,2 +1,3 @@
-.nr-checkbox((click)="onClick($event)")
-    div([ngClass]="{'label': true, 'disabled': disabled, 'is-checked': checked}") {{label}}
+.nr-checkbox((click)="onClick($event)", [ngClass]="{'disabled': disabled === true || disabled === 'true', 'checked': checked}")
+    .nr-checkbox-icon
+    .nr-checkbox-label {{label}}

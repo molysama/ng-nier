@@ -1,2 +1,5 @@
-button(type="button").nr-button
-    ng-content
+<div class="inline-flex" [ngClass]="{'w-full': full}">
+  <button class="nr-button flex-auto" type="button">
+    <ng-content></ng-content>
+  </button>
+</div>

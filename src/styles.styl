@@ -36,6 +36,10 @@ body
     letter-spacing: $letterSpacing;
     font-family helvetica, sans-serif
 
+.w-full
+    width 100%
+.inline-flex
+    display inline-flex
 .container
     padding 0 4rem 
 
@@ -47,7 +51,7 @@ fieldset.fieldset
     legend
         padding 0 0.5rem
 
-.text
+.nr-title
     text-transform uppercase
     font-weight 300
     letter-spacing .7rem
@@ -57,6 +61,11 @@ fieldset.fieldset
         text-shadow none
         text-transform none
         letter-spacing $letterSpacing
+h1, h2, h3, h4, h5, h6
+    margin-top 0.5rem
+    margin-bottom 0.5rem
+    font-weight lighter
+    letter-spacing $letterSpacing
 
 button.nr-button {
     cursor: pointer;
@@ -96,9 +105,10 @@ button.nr-button {
         background-color: transparent;
         color: $c-bg;
         border-color: $c-strong;
+        transition-delay .2s
         
         &::before {
-        width: 100%;
+            width: 100%;
         }
     }
 }
@@ -193,35 +203,40 @@ button.nr-button {
 }
 
 .nr-checkbox
-    padding-left 0.5rem
-    padding-right 0.5rem
     position relative
     text-align center
-    display inline-block
+    display inline-flex
     cursor pointer
-    .label
-        display flex
-        align-items center
-        padding-left .2em
-        transform translateY(0.36em)
-        &:before
-            content ''
-            transform rotate(45deg) translate(0.1em, -0.08em)
-            transition background .1s linear
-            margin-right .6em
-            padding .16em
-            border 1px solid $c-border
-            width 1em
-            min-width @width
-            height @width
-            min-height @width
-            background-clip content-box!important
-            background transparent
-        &.is-checked:before
+    align-items center
+    padding 0 0.2rem 0 0.6rem
+    &-icon
+        box-sizing border-box
+        transform rotate(45deg)
+        transition background .1s linear
+        margin-right .4em
+        padding .16em
+        border 1px solid $c-border
+        width 1em
+        min-width @width
+        height @width
+        min-height @width
+        background-clip content-box!important
+        background transparent
+    &.checked
+        .nr-checkbox-icon
             background $color
-        &.disabled
-            color $c-disabled
-            &:before
-                border-color $c-disabled
-            &.is-checked:before
-                background-color $c-disabled
+    &.disabled
+        color $c-disabled
+        .nr-checkbox-icon
+            border-color $c-disabled
+            background-color $c-disabled
+
+.invert
+    background $color
+    color $c-bg
+    margin 0
+    padding 0.5rem
+.block
+    overflow hidden
+    background $c-bg
+    margin-bottom 1rem

@@ -3,10 +3,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'nr-checkbox',
-  // templateUrl: './checkbox.component.pug',
+  templateUrl: './checkbox.component.pug',
   template: `
-<div class="nr-checkbox" (click)="onClick($event)">
-  <div [ngClass]="{'label': true, 'disabled': disabled, 'is-checked': checked}">{{label}}</div>
+<div class="nr-checkbox" (click)="onClick($event)" [ngClass]="{'disabled': disabled === true || disabled === 'true', 'checked': checked}">
+  <div class="nr-checkbox-icon"></div>
+  <div class="nr-checkbox-label">{{label}}</div>
 </div>
 `,
   styles: [],
@@ -27,7 +28,7 @@ export class CheckboxComponent implements ControlValueAccessor {
   value: boolean
 
   @Input()
-  disabled: boolean
+  disabled: boolean | string
 
   @Output()
   onChange: EventEmitter<any> = new EventEmitter()
@@ -42,7 +43,7 @@ export class CheckboxComponent implements ControlValueAccessor {
 
   onClick(event) {
     event.preventDefault()
-    if (this.disabled) {
+    if (this.disabled === true || this.disabled === 'true') {
       return
     }
 

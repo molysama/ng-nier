@@ -1,12 +1,21 @@
 .pt2.container
-    h1.text
+    h1(nr-title)
         span NIER:AUTOMATA YORHA UI
         small.ml2 Angular Component
 .nr-hr
     .container
         .nr-hr-tag
 .container
-    nr-button This is a button
+    h1 Heading 1
+    h2 Heading 2
+    h3 Heading 3
+    h4 Heading 4
+    h5 Heading 5
+    h1.invert Heading Invert 1
+    .block
+        p block
+.nr-hr.mb2.mx1
+.container
     nr-fieldset
         p 内容1
         p 内容2
@@ -17,7 +26,7 @@
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim! Quibusdam illo molestias architecto dignissimos aut laborum commodi magni. Aspernatur laborum quod repudiandae quaerat rerum corporis tempore nihil dolorem voluptatem?
         nr-button 开始
         nr-checkbox(label="2B", [(ngModel)]="check2B")
-        nr-checkbox(label="9S", [(ngModel)]="check9S", [disabled]="false")
+        nr-checkbox(label="9S", [(ngModel)]="check9S", disabled="true")
         nr-checkbox(label="A2", [(ngModel)]="checkA2", [disabled]="true")
     nr-content
         nr-checkbox(label="Android-1", value="Android-1", [(ngModel)]="android")
@@ -26,4 +35,6 @@
         nr-checkbox(label="Android-Undefined", [(ngModel)]="android")
         nr-checkbox(label="Android-4", value="Android-4", [(ngModel)]="android", [disabled]="true")
         p android: {{android.length > 0 ? android : 'empty'}}
+        nr-button(w-full) full width button in content
+    nr-button(w-full) This is a button
 router-outlet

@@ -48,6 +48,12 @@
       ],
       "content/*": [
         "dist/content/*"
+      ],
+      "title": [
+        "dist/title"
+      ],
+      "title/*": [
+        "dist/title/*"
       ]
     }
   },
