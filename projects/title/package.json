@@ -1,8 +1,11 @@
 {
-  "name": "title",
+  "name": "@ng-nier/title",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^8.2.13",
     "@angular/core": "^8.2.13"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
