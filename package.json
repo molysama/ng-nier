@@ -60,7 +60,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "lerna": "^3.16.5",
-    "ng-packagr": "^5.4.0",
+    "ng-packagr": "^10.1.1",
     "protractor": "~5.4.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
